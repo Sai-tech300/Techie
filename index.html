@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="ÜTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>April Fool Awareness</title>
+
+<style>
+body {
+font-family: Arial, sans-serif;
+background: black;
+color: #00ffcc;
+text-align: center;
+padding:40px;
+}
+
+.container {
+background: #111;
+padding:25px;
+border-radius: 15px;
+box-shadow: 0 0 20px #00ffcc;
+}
+
+h1 {
+color: #ff4081;
+}
+
+button {
+margin-tpo: 20px;
+padding: 12px 20px;
+border: none;
+background: #ff4081;
+color: white;
+font-size: 16px;
+border-radius: 8px;
+cursor: pointer;
+}
+
+button:hover {
+background: #e91e63;
+}
+
+#scan {
+margin-top: 20px;
+font-size: 18px;
+color: yellow;
+}
+
+.warning {
+margin-top: 20px;
+padding: 15px;
+background: #330000;
+border-left: 5px solid red;
+}
+
+.hidden {
+display: none;
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="container">
+<h1>Happy April Fool's Day </h1>
+<p>Click below to see something cool </p>
+
+<button onclick="startprank()">Start
+
+<div id="scan"></div>
+
+<div id="result"class="hidden">
+<h2> Device Scan Complete !</h2>
+<p>Analyzing your device...</p>
+<p id="fakeData"></p>
+
+<div class="warning"<br><br>
+No data was collected.<br><br>
+Never trust unknown links - they can steal your data.
+</div>
+
+<button onclick="showTips()">Stay Safe Tips </button><p id="tips"></p>
+</div>
+<script>
+
+function showTips() {
+documen.getElementById("tips").innerHTML =
+"Check ULSs before clicking<br>" +
+"Avoid unknown downloads<br>" +
+"Don't share OTPs/passwords<br>";
+}
+</script>
+
+</body>
+</html>
