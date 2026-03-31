@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="ÜTF-8">
+<meta charset="ÃœTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>April Fool Awareness</title>
 
@@ -80,9 +80,40 @@ No data was collected.<br><br>
 Never trust unknown links - they can steal your data.
 </div>
 
-<button onclick="showTips()">Stay Safe Tips </button><p id="tips"></p>
+<button onclick="showTips()">Stay Safe Tips </button>
+<p id="tips"></p>
 </div>
 <script>
+
+function startPrank() {
+let scan = document.getElementById("scan");
+let result = document.getElementById("result");
+let fakeData = document.getElementById("fakeData");
+
+let steps = [
+    "Conncting to device...",
+    "Fetching details...",
+    "Analyzing activity...",
+    "Almost done..."
+];
+
+let i = 0;
+scan.innerHTML = steps[i];
+
+let interval = setInterval(() => {
+i++;
+if (i < steps.length) {
+scan.innerHTML = steps[i];
+scan.innerHTML = "";
+result.classList.remove("hidden");
+
+fakeData.innerHTML =
+"Device : Android<br>" +
+"IP :192.168.62.1<br>" +
+" April Fool ! Nothing was accessed";
+}
+}, 1200);
+}
 
 function showTips() {
 documen.getElementById("tips").innerHTML =
