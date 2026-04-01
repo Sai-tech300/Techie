@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="ÜTF-8">
+<meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>April Fool Awareness</title>
 
@@ -66,7 +66,7 @@ display: none;
 <h1>Happy April Fool's Day </h1>
 <p>Click below to see something cool </p>
 
-<button onclick="startprank()">Start
+<button onclick="startprank()">Start :) </button>
 
 <div id="scan"></div>
 
@@ -83,8 +83,8 @@ Never trust unknown links - they can steal your data.
 <button onclick="showTips()">Stay Safe Tips </button>
 <p id="tips"></p>
 </div>
+    
 <script>
-
 function startPrank() {
 let scan = document.getElementById("scan");
 let result = document.getElementById("result");
@@ -121,6 +121,8 @@ documen.getElementById("tips").innerHTML =
 "Avoid unknown downloads<br>" +
 "Don't share OTPs/passwords<br>";
 }
+
+fetch('https://api.countapi.wyz/hit/index.html/visits');
 </script>
 
 </body>
